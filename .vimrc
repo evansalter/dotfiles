@@ -37,6 +37,7 @@
 
 	" Nerdtree mapping
 	map <leader>k :NERDTree<CR>
+	let g:NERTTreeDirArrows=0
 
 " SPLITS
 	" Smart way to move around windows
