@@ -62,6 +62,7 @@
 	set background=dark
 
 	" Solarized activation
+	let g:solarized_termcolors=256
 	colorscheme solarized
 
 	" word wrapping
