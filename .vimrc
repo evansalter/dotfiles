@@ -104,6 +104,9 @@
 	" move block
 	vnoremap J xp`[V`]
 	vnoremap K xkP`[V`]
+
+	" encoding
+	set encoding=utf-8
 	
 
 " AUTOCOMMANDS
