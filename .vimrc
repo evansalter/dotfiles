@@ -59,11 +59,12 @@
 	
 	syntax enable
 
-	set background=dark
-
 	" Solarized activation
-	let g:solarized_termcolors=256
+	if &term == "xterm"
+		let g:solarized_termcolors=256
+	endif
 	colorscheme solarized
+	set background=dark
 
 	" word wrapping
 	set wrap
