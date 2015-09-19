@@ -40,6 +40,9 @@
 	map <leader>k :NERDTree<CR>
 	let g:NERTTreeDirArrows=0
 
+	" tagbar mapping
+	map <leader>t :TagbarToggle<CR><C-l>
+
 " SPLITS
 	" Smart way to move around windows
 	noremap <C-h> <C-w>h
