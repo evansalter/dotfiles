@@ -22,6 +22,7 @@
 	Plugin 'tpope/vim-surround'
 	Plugin 'christoomey/vim-tmux-navigator'
 	Plugin 'dhruvasagar/vim-table-mode'
+	Plugin 'majutsushi/tagbar'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
