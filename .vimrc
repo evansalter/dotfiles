@@ -114,6 +114,8 @@
 	" encoding
 	set encoding=utf-8
 	
+	" font
+	set guifont=Hack\ Regular:h11
 
 " AUTOCOMMANDS
 	" auto source .vimrc on change
