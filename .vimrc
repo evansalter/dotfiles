@@ -23,6 +23,7 @@
 	Plugin 'christoomey/vim-tmux-navigator'
 	Plugin 'dhruvasagar/vim-table-mode'
 	Plugin 'majutsushi/tagbar'
+	Plugin 'tpope/vim-fugitive'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
@@ -111,11 +112,15 @@
 	vnoremap J xp`[V`]
 	vnoremap K xkP`[V`]
 
+	" font
+	set guifont=Hack\ Regular:h11
+
+	" airline font
+	let g:airline_powerline_fonts = 1
+
 	" encoding
 	set encoding=utf-8
 	
-	" font
-	set guifont=Hack\ Regular:h11
 
 " AUTOCOMMANDS
 	" auto source .vimrc on change
