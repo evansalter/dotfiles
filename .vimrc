@@ -64,9 +64,13 @@
 	
 	syntax enable
 
-	" Solarized activation
+	" airline font
+	let g:airline_powerline_fonts = 1
+
+	" Putty options 
 	if &term == "xterm"
 		let g:solarized_termcolors=256
+		let g:airline_powerline_fonts=0
 	endif
 	colorscheme solarized
 	set background=dark
@@ -115,8 +119,6 @@
 	" font
 	set guifont=Hack\ Regular:h11
 
-	" airline font
-	let g:airline_powerline_fonts = 1
 
 	" encoding
 	set encoding=utf-8
