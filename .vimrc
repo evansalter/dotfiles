@@ -24,6 +24,7 @@
 	Plugin 'dhruvasagar/vim-table-mode'
 	Plugin 'majutsushi/tagbar'
 	Plugin 'tpope/vim-fugitive'
+	Plugin 'tpope/vim-commentary'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
