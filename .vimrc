@@ -133,6 +133,9 @@
 		\ source ~/.vimrc | AirlineRefresh
 	augroup END
 
+" Pandoc PDF
+	nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
+
 " SEARCHING
 	set ignorecase
 
