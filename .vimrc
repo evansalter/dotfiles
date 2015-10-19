@@ -123,6 +123,10 @@
 
 	" encoding
 	set encoding=utf-8
+
+	" bufferline
+ 	let g:bufferline_active_buffer_left = '['
+ 	let g:bufferline_active_buffer_right = ']'
 	
 
 " AUTOCOMMANDS
@@ -132,6 +136,9 @@
 	    autocmd BufWritePost .vimrc,_vimrc,vimrc
 		\ source ~/.vimrc | AirlineRefresh
 	augroup END
+
+" *.md set to Markdown syntax
+	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Pandoc PDF
 	nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
