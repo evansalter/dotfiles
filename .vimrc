@@ -14,7 +14,6 @@
 " PLUGINS
 	Plugin 'syntastic'
 	Plugin 'bling/vim-airline'
-	Plugin 'bling/vim-bufferline'
 	Plugin 'restore_view.vim'
 	Plugin 'altercation/vim-colors-solarized'
 	Bundle 'rking/ag.vim'
@@ -124,9 +123,8 @@
 	" encoding
 	set encoding=utf-8
 
-	" bufferline
- 	let g:bufferline_active_buffer_left = '['
- 	let g:bufferline_active_buffer_right = ']'
+	" tabline
+	let g:airline#extensions#tabline#enabled = 1
 	
 
 " AUTOCOMMANDS
