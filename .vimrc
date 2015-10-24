@@ -24,6 +24,7 @@
 	Plugin 'majutsushi/tagbar'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-commentary'
+	Plugin 'airblade/vim-gitgutter'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
@@ -57,6 +58,9 @@
 " DISPLAY CONFIG
 	" line numbers
 	set number
+
+	" vim-gitgutter update time
+	set updatetime=750
 
 	" xterm 256 colors
 	set t_Co=256
