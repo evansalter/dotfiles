@@ -25,6 +25,7 @@
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-commentary'
 	Plugin 'airblade/vim-gitgutter'
+	Plugin 'vim-pandoc/vim-pandoc'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
