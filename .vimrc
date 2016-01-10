@@ -26,6 +26,7 @@
 	Plugin 'tpope/vim-commentary'
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'vim-pandoc/vim-pandoc'
+	Plugin 'davidhalter/jedi-vim'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line
@@ -145,6 +146,9 @@
 
 " Pandoc PDF
 	nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
+
+" Make
+	nnoremap <leader>m :make<cr>
 
 " SEARCHING
 	set ignorecase
