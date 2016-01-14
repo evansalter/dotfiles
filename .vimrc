@@ -27,6 +27,7 @@
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'vim-pandoc/vim-pandoc'
 	Plugin 'davidhalter/jedi-vim'
+	Plugin 'junegunn/vim-xmark'
 
 " VUNDLE RULES
 	" All of your Plugins must be added before the following line

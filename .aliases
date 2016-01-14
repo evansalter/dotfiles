@@ -1,0 +1,30 @@
+alias school="~/School/year3/term2"
+alias 345="cd /Users/evansalter/School/year3/term2/STAT\ 345 && ls"
+alias 111="cd /Users/evansalter/School/year3/term2/ANTH\ 111 && ls"
+alias 340="cd /Users/evansalter/School/year3/term2/CMPT\ 340 && ls"
+alias 350="cd /Users/evansalter/School/year3/term2/CMPT\ 350 && ls"
+alias 371="cd /Users/evansalter/School/year3/term2/CMPT\ 371 && ls"
+
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+export EDITOR="vim"
+
+note() {
+	FILE="`date +%Y-%m-%d`.md"
+	DATE="`date +"%A, %B %d, %Y"`"
+	if [ -f $FILE ];
+	then
+		$EDITOR $FILE
+	else
+		echo "# $DATE" >> $FILE
+		$EDITOR $FILE
+	fi
+}
+
+alias tuxworld="ssh evs162@tux3.usask.ca"
+alias shellshock="curl -s https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck | bash"
+alias openschool="school; open ."
+alias spim="spim -file"
+alias expose=~/dev/misc/Expose/expose.sh
+
+alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
