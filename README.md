@@ -5,6 +5,6 @@ Vim dotfiles for syncing with all my systems:
 * School Linux server
 * My personal Linux servers
 
-Feel free to check it out and take and snippets that interest you.
+Feel free to check it out and take any snippets that interest you.
 
-![](http://i.imgur.com/SsrKEsl.png)
+![](http://i.imgur.com/8uDQShR.png)
