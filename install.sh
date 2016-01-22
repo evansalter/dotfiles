@@ -13,3 +13,4 @@ ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.tmux ~/.tmux
 ln -sf ~/dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
+ln -sf ~/dotfiles/tmux-powerline-theme.sh ~/.tmux/plugins/tmux-powerline/themes/tmux-powerline-theme.sh
