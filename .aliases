@@ -28,3 +28,5 @@ alias spim="spim -file"
 alias expose=~/dev/misc/Expose/expose.sh
 
 alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
+
+alias sw="s -p wikipedia"
