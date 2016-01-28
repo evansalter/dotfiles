@@ -7,4 +7,4 @@ Vim dotfiles for syncing with all my systems:
 
 Feel free to check it out and take any snippets that interest you.
 
-![](http://i.imgur.com/8uDQShR.png)
+![](http://i.imgur.com/Hnuu4fZ.png)
