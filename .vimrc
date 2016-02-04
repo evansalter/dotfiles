@@ -124,16 +124,11 @@
 	vnoremap J xp`[V`]
 	vnoremap K xkP`[V`]
 
-	" font
-	set guifont=Hack\ Regular:h11
-
-
 	" encoding
 	set encoding=utf-8
 
 	" tabline
 	let g:airline#extensions#tabline#enabled = 1
-	
 
 " AUTOCOMMANDS
 	" auto source .vimrc on change
@@ -143,19 +138,25 @@
 		\ source ~/.vimrc | AirlineRefresh
 	augroup END
 
-" *.md set to Markdown syntax
+" MARKDOWN
+	" *.md set to Markdown syntax
 	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" Pandoc PDF
+	" Pandoc PDF
 	nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
 
-" Make
+" MISC
+	" Make
 	nnoremap <leader>m :make<cr>
 
-" SEARCHING
+	" SEARCHING
 	set ignorecase
 
-" TABLE MODE
+	" Easy paste mode
+	nnoremap <leader>v :set paste<cr>"+p:set nopaste<cr>
+
+	" TABLE MODE
 	let g:table_mode_fillchar = '-'
 	let g:table_mode_corner = '+'
 	let g:table_mode_corner_corner = '+'
+
