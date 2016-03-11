@@ -4,7 +4,7 @@
 " PLUGINS
 	Plug 'syntastic'
 	Plug 'vim-airline/vim-airline'
-        Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline-themes'
 	Plug 'restore_view.vim'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'scrooloose/nerdtree'
@@ -18,7 +18,8 @@
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'davidhalter/jedi-vim'
 	Plug 'junegunn/vim-xmark'
-
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 
 " VIM-PLUG RULES
         call plug#end()
@@ -169,3 +170,13 @@
     nnoremap X "_x
 
     noremap gV `[v`]
+
+" UltiSnips
+    " Trigger configuration. Do not use <tab> if you use
+    " https://github.com/Valloric/YouCompleteMe.
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-n>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+    " If you want :UltiSnipsEdit to split your window.
+    let g:UltiSnipsEditSplit="vertical"
