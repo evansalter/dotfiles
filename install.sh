@@ -55,7 +55,7 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 printf "Checking if Vim-Plug is installed..."
-if [ ! ~/dotfiles/.vim/autoload/plug.vim ]; then
+if [ ~/dotfiles/.vim/autoload/plug.vim ]; then
 	printf "Nope!\nInstalling Vim-Plug..."
 	curl -fLo ~/dotfiles/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	printf "Done!\n"
