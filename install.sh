@@ -54,13 +54,19 @@ if [ `uname` = "Darwin" ]; then
 	fi
 fi
 
-printf "Checking if Vundle is installed..."
-if [ ~/dotfiles/.vim/bundle/Vundle.vim ]; then
-	printf "Nope!\nInstalling Vundle..."
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/.vim/bundle/Vundle.vim
+printf "Checking if Vim-Plug is installed..."
+if [ ! ~/dotfiles/.vim/autoload/plug.vim ]; then
+	printf "Nope!\nInstalling Vim-Plug..."
+	curl -fLo ~/dotfiles/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	printf "Done!\n"
 else
 	printf "Yup!\n"
+fi
+
+printf "Checking for leftover Vundle plugins..."
+if [ -d ~/dotfiles/.vim/bundle ]; then
+	rm -rf ~/dotfiles/vim/bundle
+	echo "Deleted!"
 fi
 
 printf "Checking if TPM is installed..."
@@ -76,8 +82,8 @@ printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
 ln -sf ~/dotfiles/.vim ~/.vim
-printf "Installing Vundle plugins...\n"
-vim +PluginInstall +qall
+printf "Installing Vim-Plug plugins...\n"
+vim +PlugInstall +qall
 printf "Linking .tmux.conf...\n"
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 printf "Linking .tmux/...\n"

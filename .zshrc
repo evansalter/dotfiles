@@ -21,6 +21,9 @@ export PROJECT_HOME=$HOME/dev
 source /usr/local/bin/virtualenvwrapper.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# rbenv
+eval "$(rbenv init -)"
+
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.aliases
@@ -37,6 +40,6 @@ precmd()
 	_update_ps1
 }
 
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+# PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

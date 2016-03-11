@@ -5,8 +5,6 @@ alias 340="cd /Users/evansalter/School/year3/term2/CMPT\ 340 && ls"
 alias 350="cd /Users/evansalter/School/year3/term2/CMPT\ 350 && ls"
 alias 371="cd /Users/evansalter/School/year3/term2/CMPT\ 371 && ls"
 
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-
 export EDITOR="vim"
 
 note() {
@@ -30,3 +28,5 @@ alias expose=~/dev/misc/Expose/expose.sh
 alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
 
 alias sw="s -p wikipedia"
+
+alias pyserv="python -m SimpleHTTPServer 8000"

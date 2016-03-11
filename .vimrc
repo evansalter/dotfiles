@@ -1,39 +1,27 @@
-" VUNDLE RULES
-	set nocompatible              " be iMproved, required
-	filetype off                  " required
-
-	" set the runtime path to include Vundle and initialize
-	set rtp+=~/.vim/bundle/Vundle.vim
-	call vundle#begin()
-	" alternatively, pass a path where Vundle should install plugins
-	"call vundle#begin('~/some/path/here')
-
-	" let Vundle manage Vundle, required
-	Plugin 'gmarik/Vundle.vim'
+" VIM-PLUG RULES
+	call plug#begin('~/.vim/plugged')
 
 " PLUGINS
-	Plugin 'syntastic'
-	Plugin 'bling/vim-airline'
-	Plugin 'restore_view.vim'
-	Plugin 'altercation/vim-colors-solarized'
-	Bundle 'rking/ag.vim'
-	Plugin 'scrooloose/nerdtree'
-	Plugin 'tpope/vim-surround'
-	Plugin 'christoomey/vim-tmux-navigator'
-	Plugin 'dhruvasagar/vim-table-mode'
-	Plugin 'majutsushi/tagbar'
-	Plugin 'tpope/vim-fugitive'
-	Plugin 'tpope/vim-commentary'
-	Plugin 'airblade/vim-gitgutter'
-	Plugin 'vim-pandoc/vim-pandoc'
-	Plugin 'davidhalter/jedi-vim'
-	Plugin 'junegunn/vim-xmark'
+	Plug 'syntastic'
+	Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+	Plug 'restore_view.vim'
+	Plug 'altercation/vim-colors-solarized'
+	Plug 'scrooloose/nerdtree'
+	Plug 'tpope/vim-surround'
+	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'dhruvasagar/vim-table-mode'
+	Plug 'majutsushi/tagbar'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-commentary'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'davidhalter/jedi-vim'
+	Plug 'junegunn/vim-xmark'
 
 
-" VUNDLE RULES
-	" All of your Plugins must be added before the following line
-	call vundle#end()            " required
-	filetype plugin indent on    " required
+" VIM-PLUG RULES
+        call plug#end()
 
 " FILE EXPLORER
 	let mapleader=" "
@@ -160,3 +148,24 @@
 	let g:table_mode_corner = '+'
 	let g:table_mode_corner_corner = '+'
 
+" Tabs
+	set softtabstop=4
+	set shiftwidth=4
+	set expandtab
+
+" Others
+    set noswapfile
+    if has("persistent_undo")
+        set undodir=$HOME/.vim/undo//
+        if !isdirectory(&undodir)
+            call mkdir(&undodir)
+        endif
+        set undofile
+    endif
+
+    vnoremap c "_c
+    nnoremap c "_c
+    nnoremap x "_x
+    nnoremap X "_x
+
+    noremap gV `[v`]
