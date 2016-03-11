@@ -55,7 +55,7 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 printf "Checking if Vim-Plug is installed..."
-if [ ~/dotfiles/.vim/autoload/plug.vim ]; then
+if [ ! -f ~/dotfiles/.vim/autoload/plug.vim ]; then
 	printf "Nope!\nInstalling Vim-Plug..."
 	curl -fLo ~/dotfiles/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	printf "Done!\n"
@@ -66,7 +66,9 @@ fi
 printf "Checking for leftover Vundle plugins..."
 if [ -d ~/dotfiles/.vim/bundle ]; then
 	rm -rf ~/dotfiles/vim/bundle
-	echo "Deleted!"
+	printf "Deleted!\n"
+else
+        printf "None found!\n"
 fi
 
 printf "Checking if TPM is installed..."
