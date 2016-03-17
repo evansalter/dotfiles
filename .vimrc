@@ -20,16 +20,14 @@
     Plug 'junegunn/vim-xmark'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'ryanoasis/vim-devicons'
 
 " VIM-PLUG RULES
     call plug#end()
 
 " FILE EXPLORER
     let mapleader=" "
-    " map <leader>k :Explore<cr>
 
-    " To show airline by default
-    set laststatus=2
 
     " Nerdtree mapping
     map <leader>k :NERDTree<CR>
@@ -37,6 +35,8 @@
 
     " tagbar mapping
     map <leader>t :TagbarToggle<CR><C-l>
+
+    noremap :W :w
 
 " SPLITS
     " Smart way to move around windows
@@ -49,21 +49,19 @@
     set splitright
 
 " DISPLAY CONFIG
+    " To show airline by default
+    set laststatus=2
     " line numbers
     set number
-
     " vim-gitgutter update time
     set updatetime=750
-
     " xterm 256 colors
     set t_Co=256
     set t_ut=
-
     syntax enable
-
     " airline font
     let g:airline_powerline_fonts = 1
-
+    let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l%#__restore__#:%3v"
     " Putty options 
     if &term == "xterm"
         let g:solarized_termcolors=256
@@ -71,18 +69,14 @@
     endif
     colorscheme solarized
     set background=dark
-
     " word wrapping
     set wrap
     set linebreak
     set nolist
-
     " highlight current line
     set cursorline
-
     " syntax highlighting
     syntax on
-
     " Set extra options when running in GUI mode
     if has("gui_running")
         set guioptions -=a " native selection with * register?
@@ -92,30 +86,23 @@
         set guioptions -=L " No left scrollbar
         set t_Co=256
     endif
-
-    " Folding Settings
-    augroup vimrc
-        au BufReadPre * setlocal foldmethod=indent
-        au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
-    augroup END
-
+    " Leave folds open when opening new file
+    set foldlevelstart=20
+    " By default try to guess foldmethod
+    set foldmethod=syntax
     " Remap Arrow Keys to quick resize windows
     nnoremap <silent> <Left> :vertical resize -1<CR>
     nnoremap <silent> <Right> :vertical resize +1<CR>
     nnoremap <silent> <Up> :resize +1<CR>
     nnoremap <silent> <Down> :resize -1<CR>
-
     " keep selection after >
     vnoremap > >gv
     vnoremap < <gv
-
     " move block
     vnoremap J xp`[V`]
     vnoremap K xkP`[V`]
-
     " encoding
     set encoding=utf-8
-
     " tabline
     let g:airline#extensions#tabline#enabled = 1
 
@@ -130,7 +117,6 @@
 " MARKDOWN
     " *.md set to Markdown syntax
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
     " Pandoc PDF
     nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
 
