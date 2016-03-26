@@ -33,5 +33,6 @@ alias expose=~/dev/misc/Expose/expose.sh
 alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
 
 alias sw="s -p wikipedia"
+alias simdb="s -p imdb"
 
 alias pyserv="python -m SimpleHTTPServer 8000"
