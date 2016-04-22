@@ -21,6 +21,7 @@
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'evansalter/vim-checklist'
 
 " VIM-PLUG RULES
     call plug#end()
@@ -105,6 +106,8 @@
     set encoding=utf-8
     " tabline
     let g:airline#extensions#tabline#enabled = 1
+    " scrollof
+    set so=5
 
 " AUTOCOMMANDS
     " auto source .vimrc on change
@@ -166,3 +169,11 @@
 
     " If you want :UltiSnipsEdit to split your window.
     let g:UltiSnipsEditSplit="vertical"
+
+" VIM-CHECKLIST
+    nnoremap <leader>ct :ChecklistToggleCheckbox<cr>
+    nnoremap <leader>ce :ChecklistEnableCheckbox<cr>
+    nnoremap <leader>cd :ChecklistDisableCheckbox<cr>
+    vnoremap <leader>ct :ChecklistToggleCheckbox<cr>
+    vnoremap <leader>ce :ChecklistEnableCheckbox<cr>
+    vnoremap <leader>cd :ChecklistDisableCheckbox<cr>
