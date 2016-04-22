@@ -36,3 +36,5 @@ alias sw="s -p wikipedia"
 alias simdb="s -p imdb"
 
 alias pyserv="python -m SimpleHTTPServer 8000"
+
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
