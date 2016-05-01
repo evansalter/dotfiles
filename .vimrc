@@ -22,6 +22,7 @@
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
     Plug 'evansalter/vim-checklist'
+    Plug 'ChrisPenner/vim-committed'
 
 " VIM-PLUG RULES
     call plug#end()
