@@ -52,6 +52,10 @@ if [ `uname` = "Darwin" ]; then
                         fi
                 fi
         fi
+        if [ $BREW ]; then
+                printf "Installing Mackup...\n"
+                brew install mackup
+        fi
 fi
 
 printf "Checking if Vim-Plug is installed..."
@@ -96,4 +100,7 @@ printf "Linking .tmux-powerlinerc...\n"
 ln -sf ~/dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
 printf "Linking .tmux-powerline-theme...\n"
 ln -sf ~/dotfiles/tmux-powerline-theme.sh ~/.tmux/plugins/tmux-powerline/themes/tmux-powerline-theme.sh
+printf "Linking .mackup.cfg...\n"
+ln -sf ~/dotfiles/.mackup.cfg ~/.mackup.cfg
 
+printf "\n\nTo restore Mackup configuration, run 'mackup restore'\n"
