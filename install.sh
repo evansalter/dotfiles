@@ -16,7 +16,7 @@ install_vim() {
         if [ $resp = "y" ]; then
                 printf "Installing Vim...\n"
                 sudo chown -R $USER /usr/local/Cellar
-                brew install macvim --override-system-vim
+                brew install macvim --with-override-system-vim
                 brew linkapps
         else
                 printf "Skipping Vim.\n"
@@ -37,7 +37,7 @@ if [ `uname` = "Darwin" ]; then
         printf "Checking Vim version..."
         VIM_VER=`vim --version | head -n 1 | sed 's/[^0-9.]*\([0-9.]*\).*/\1/'`
         printf "%s\n" "$VIM_VER"
-        if [ ! `echo $VIM_VER '<' 7.4 | bc -l` ]; then
+        if [ `echo $VIM_VER '<' 7.4 | bc -l` ]; then
                 if [ $BREW ]; then
                         printf "Would you like to install Vim version 7.4+? [y/n]"
                         install_vim
