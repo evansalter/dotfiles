@@ -84,6 +84,15 @@ else
         printf "Yup!\n"
 fi
 
+printf "Checking if Oh-My-ZSH is installed..."
+if [ ! -d ~/.oh-my-zsh ]; then
+        printf "Nope!\nInstalling Oh-My-ZSH"
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        printf "Done!\n"
+else
+        printf "Yup!\n"
+fi
+
 printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
