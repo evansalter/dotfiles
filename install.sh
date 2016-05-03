@@ -96,6 +96,8 @@ fi
 
 printf "Linking .zshrc...\n"
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+printf "Linking .zsh_plugins...\n"
+ln -sf ~/dotfiles/.zsh_plugins/ ~/.zsh_plugins
 printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
