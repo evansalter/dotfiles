@@ -94,6 +94,8 @@ else
         printf "Yup!\n"
 fi
 
+printf "Linking .zshrc...\n"
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
 printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
