@@ -86,8 +86,9 @@ fi
 
 printf "Checking if Oh-My-ZSH is installed..."
 if [ ! -d ~/.oh-my-zsh ]; then
-        printf "Nope!\nInstalling Oh-My-ZSH"
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        printf "Nope!\nInstalling Oh-My-ZSH..."
+        git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+        chsh -s /bin/zsh
         printf "Done!\n"
 else
         printf "Yup!\n"
