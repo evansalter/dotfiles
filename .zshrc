@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="Pure"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -15,37 +15,38 @@ plugins=(git, vi-mode)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="$HOME/google-cloud-sdk:$HOME/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# rbenv
-eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.aliases
 
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
-# Powerline
-function _update_ps1()
-{
-	export PROMPT="$(~/.zsh_plugins/powerline-zsh/powerline-zsh.py $?)"
-}
-precmd()
-{
-	_update_ps1
-}
+eval $(thefuck --alias)
 
-# PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+export GOROOT=/usr/local/go
+export PATH=$GOROOT/bin:$PATH
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/evansalter/dev/google-cloud-sdk/path.zsh.inc'
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# The next line enables shell command completion for gcloud.
-source '/Users/evansalter/dev/google-cloud-sdk/completion.zsh.inc'
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+source ~/dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+. /Users/Vendasta/torch/install/bin/torch-activate
+
+echo '____   ____                 .___                __          \n\   \ /   /____   ____    __| _/____    _______/  |______   \n \   Y   // __ \ /    \  / __ |\__  \  /  ___/\   __\__  \  \n  \     /\  ___/|   |  \/ /_/ | / __ \_\___ \  |  |  / __ \_\n   \___/  \___  >___|  /\____ |(____  /____  > |__| (____  /\n              \/     \/      \/     \/     \/            \/ \n'
+
+# added by travis gem
+[ -f /Users/Vendasta/.travis/travis.sh ] && source /Users/Vendasta/.travis/travis.sh

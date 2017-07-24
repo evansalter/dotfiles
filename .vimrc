@@ -21,8 +21,10 @@
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'evansalter/vim-checklist'
+    Plug 'esalter-va/vim-checklist'
     Plug 'ChrisPenner/vim-committed'
+    Plug 'metakirby5/codi.vim'
+    Plug 'wakatime/vim-wakatime'
 
 " VIM-PLUG RULES
     call plug#end()
@@ -69,7 +71,7 @@
         let g:solarized_termcolors=256
         let g:airline_powerline_fonts=0
     endif
-    colorscheme solarized
+    colorscheme molokai 
     set background=dark
     " word wrapping
     set wrap
