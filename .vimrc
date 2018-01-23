@@ -2,10 +2,10 @@
     call plug#begin('~/.vim/plugged')
 
 " PLUGINS
-    Plug 'syntastic'
+    Plug 'vim-syntastic/syntastic'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'restore_view.vim'
+    Plug 'vim-scripts/restore_view.vim'
     Plug 'altercation/vim-colors-solarized'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
@@ -99,6 +99,11 @@
     nnoremap <silent> <Right> :vertical resize +1<CR>
     nnoremap <silent> <Up> :resize +1<CR>
     nnoremap <silent> <Down> :resize -1<CR>
+    " allow moving among lines on screen instead of real lines when wrapping
+    nnoremap j gj
+    vnoremap j gj
+    nnoremap k gk
+    vnoremap k gk
     " keep selection after >
     vnoremap > >gv
     vnoremap < <gv
@@ -125,6 +130,10 @@
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     " Pandoc PDF
     nnoremap <leader>p :! pandoc % -o %:r.pdf<cr>
+
+" LaTeX
+    nnoremap <leader>l :! bibtex %:r && latex %:r && pdflatex %:r<cr>
+    " nnoremap <leader>l :! pdflatex %<cr>
 
 " MISC
     " Make

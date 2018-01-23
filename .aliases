@@ -24,7 +24,7 @@ today_note() {
 	open PDFs/$FILE
 }
 
-alias tuxworld="ssh evs162@tux3.usask.ca"
+alias tuxworld="ssh evs162@tuxworld.usask.ca"
 alias shellshock="curl -s https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck | bash"
 alias openschool="school; open ."
 alias spim="spim -file"
@@ -38,3 +38,5 @@ alias simdb="s -p imdb"
 alias pyserv="python -m SimpleHTTPServer 8000"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+alias p3="unset PYTHONPATH && python3"
