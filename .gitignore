@@ -1,2 +1,9 @@
-.vim/
 .tmux/
+
+.vim/autoload/
+.vim/plugged/
+.vim/undo/
+.vim/view/
+.vim/.*
+
+.zsh_plugins
