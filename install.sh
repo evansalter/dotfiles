@@ -102,6 +102,8 @@ printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
 ln -sf ~/dotfiles/.vim ~/.vim
+printf "Linking .aliases...\n"
+ln -sf ~/dotfiles/.aliases ~/.aliases
 printf "Installing Vim-Plug plugins...\n"
 vim +PlugInstall +qall
 printf "Linking .tmux.conf...\n"
