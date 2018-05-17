@@ -51,3 +51,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 # added by travis gem
 [ -f /Users/evansalter/.travis/travis.sh ] && source /Users/evansalter/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ESalter/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ESalter/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/completion.zsh.inc'; fi
