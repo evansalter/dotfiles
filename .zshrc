@@ -32,7 +32,7 @@ eval $(thefuck --alias)
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$GOROOT/bin:$PATH
+export PATH=$GOBIN:$PATH
 
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
