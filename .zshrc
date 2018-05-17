@@ -15,7 +15,7 @@ plugins=(git, vi-mode)
 
 # User configuration
 
-export PATH="$HOME/anaconda/bin:$HOME/google-cloud-sdk:$HOME/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="$HOME/google-cloud-sdk:$HOME/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 # export MANPATH="/usr/local/man:$MANPATH"

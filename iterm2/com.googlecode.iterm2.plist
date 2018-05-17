@@ -876,21 +876,21 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>448 495 384 129 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 298 620 392 0 0 1280 778 </string>
+	<string>320 126 640 622 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>272 144 796 473 0 0 1280 778 </string>
+	<string>117 97 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>640 37 640 741 0 0 1280 778 </string>
+	<string>0 679 1920 379 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 421 640 357 0 0 1280 778 </string>
+	<string>0 37 717 841 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>640 37 640 741 0 0 1280 778 </string>
+	<string>156 394 570 402 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>0 50 640 357 0 0 1280 778 </string>
+	<string>0 44 955 1014 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>640 38 640 740 0 0 1280 778 </string>
+	<string>640 37 640 741 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>640 54 640 723 0 0 1280 777 </string>
+	<string>960 45 955 492 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>0 54 640 723 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -2452,6 +2452,8 @@
 			<string>/Users/evansalter</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -2546,7 +2548,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-09T18:08:35Z</date>
+	<date>2018-02-06T03:50:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2557,6 +2559,12 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.38630809294871793</real>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_evs162@tux5.usask.ca</key>
+	<true/>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_evs162@tux6.usask.ca</key>
+	<true/>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_evs162@tux7.usask.ca</key>
+	<true/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -2594,7 +2602,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.3.beta.1</string>
+	<string>3.1.5.beta.2</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>
