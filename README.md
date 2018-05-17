@@ -1,6 +1,6 @@
 # dotfiles
 
-Vim dotfiles for syncing with all my systems:
+Terminal and Vim dotfiles for syncing with all my systems:
 * My MacBook Pro
 * My personal Linux servers
 
