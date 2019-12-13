@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.aliases
 
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+export EDITOR=/usr/bin/vim
 export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
 eval $(thefuck --alias)
@@ -32,7 +32,7 @@ eval $(thefuck --alias)
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
+export PATH=$GOBIN:$GOROOT/bin:$PATH
 
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
@@ -47,9 +47,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # added by travis gem
-[ -f /Users/Vendasta/.travis/travis.sh ] && source /Users/Vendasta/.travis/travis.sh
-
-# added by travis gem
 [ -f /Users/evansalter/.travis/travis.sh ] && source /Users/evansalter/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -57,3 +54,13 @@ if [ -f '/Users/ESalter/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ES
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ESalter/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PATH="/Users/ESalter/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/ESalter/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/ESalter/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/ESalter/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/ESalter/perl5"; export PERL_MM_OPT;

@@ -40,3 +40,12 @@ alias pyserv="python -m SimpleHTTPServer 8000"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 alias p3="unset PYTHONPATH && python3"
+
+alias got="go test ./internal/..."
+alias wpo="watch kubectl get po --namespace "
+alias npmis="npm i && npm start"
+
+gmv() {
+    go mod $1 && go mod vendor
+}
+alias wthr="curl wttr.in"
