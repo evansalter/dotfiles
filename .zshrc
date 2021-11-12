@@ -24,20 +24,11 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.aliases
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
 eval $(thefuck --alias)
 
-<<<<<<< HEAD
-=======
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$GOROOT/bin:$PATH
-
-
->>>>>>> 51bbd03b8e0eb84b39de702183c3471274e5b321
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
@@ -50,13 +41,15 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # added by travis gem
+[ -f /Users/Vendasta/.travis/travis.sh ] && source /Users/Vendasta/.travis/travis.sh
+
+# added by travis gem
 [ -f /Users/evansalter/.travis/travis.sh ] && source /Users/evansalter/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/evansalter/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/evansalter/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-<<<<<<< HEAD
 if [ -f '/Users/evansalter/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/evansalter/google-cloud-sdk/completion.zsh.inc'; fi
 
 export GOROOT=/usr/local/go
@@ -66,16 +59,3 @@ export PATH=$GOROOT/bin:$PATH
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-=======
-if [ -f '/Users/ESalter/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/completion.zsh.inc'; fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-PATH="/Users/ESalter/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/ESalter/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/ESalter/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/ESalter/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/ESalter/perl5"; export PERL_MM_OPT;
->>>>>>> 51bbd03b8e0eb84b39de702183c3471274e5b321
