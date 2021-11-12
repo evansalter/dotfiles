@@ -29,12 +29,6 @@ export PYTHONPATH=/Library/Python/2.7/site-packages/:$PYTHONPATH
 
 eval $(thefuck --alias)
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOROOT/bin:$PATH
-
-
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
@@ -53,7 +47,15 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 [ -f /Users/evansalter/.travis/travis.sh ] && source /Users/evansalter/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ESalter/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/evansalter/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/evansalter/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ESalter/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ESalter/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/evansalter/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/evansalter/google-cloud-sdk/completion.zsh.inc'; fi
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOROOT/bin:$PATH
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
