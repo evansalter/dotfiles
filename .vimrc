@@ -18,12 +18,13 @@
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'davidhalter/jedi-vim'
     Plug 'junegunn/vim-xmark'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
     Plug 'esalter-va/vim-checklist'
     Plug 'ChrisPenner/vim-committed'
     Plug 'metakirby5/codi.vim'
     Plug 'wakatime/vim-wakatime'
-    Plug 'vim/killersheep'
 
 " VIM-PLUG RULES
     call plug#end()
