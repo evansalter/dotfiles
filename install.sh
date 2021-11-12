@@ -75,15 +75,6 @@ else
         printf "None found!\n"
 fi
 
-printf "Checking if TPM is installed..."
-if [ ! -d ~/dotfiles/.tmux ]; then
-        printf "Nope!\nInstalling TPM..."
-        git clone https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
-        printf "Done!\n"
-else
-        printf "Yup!\n"
-fi
-
 printf "Checking if Oh-My-ZSH is installed..."
 if [ ! -d ~/.oh-my-zsh ]; then
         printf "Nope!\nInstalling Oh-My-ZSH..."
@@ -106,16 +97,6 @@ printf "Linking .aliases...\n"
 ln -sf ~/dotfiles/.aliases ~/.aliases
 printf "Installing Vim-Plug plugins...\n"
 vim +PlugInstall +qall
-printf "Linking .tmux.conf...\n"
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-printf "Linking .tmux/...\n"
-ln -sf ~/dotfiles/.tmux ~/.tmux
-printf "Installing tmux plugins...\n"
-~/.tmux/plugins/tpm/bin/install_plugins
-printf "Linking .tmux-powerlinerc...\n"
-ln -sf ~/dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
-printf "Linking .tmux-powerline-theme...\n"
-ln -sf ~/dotfiles/tmux-powerline-theme.sh ~/.tmux/plugins/tmux-powerline/themes/tmux-powerline-theme.sh
 printf "Linking .mackup.cfg...\n"
 ln -sf ~/dotfiles/.mackup.cfg ~/.mackup.cfg
 
