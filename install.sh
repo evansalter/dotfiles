@@ -86,19 +86,19 @@ else
 fi
 
 printf "Checking if .zshrc_base is sourced in ~/.zshrc..."
-if grep 'source $HOME/dotfiles/.zshrc_based' .zshrc; then
+if grep 'source ~/dotfiles/.zshrc_base' ~/.zshrc; then
         printf "Yup!\n"
 else
-        printf "Nope!\nAdding .zshrc_base to ~/.zshrc"
+        printf "Nope!\nAdding .zshrc_base to ~/.zshrc\n"
         echo "source ~/dotfiles/.zshrc_base" >> ~/.zshrc
 fi
 
 printf "Linking .zsh_plugins...\n"
-ln -sf ~/dotfiles/.zsh_plugins/ ~/.zsh_plugins
+ln -sfF ~/dotfiles/.zsh_plugins/ ~/.zsh_plugins
 printf "Linking .vimrc...\n"
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 printf "Linking .vim/...\n"
-ln -sf ~/dotfiles/.vim ~/.vim
+ln -sfF ~/dotfiles/.vim ~/.vim
 printf "Linking .aliases...\n"
 ln -sf ~/dotfiles/.aliases ~/.aliases
 printf "Installing Vim-Plug plugins...\n"
